@@ -7,7 +7,6 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var xmlhttprequest_1 = require("xmlhttprequest");
 var TheMovieDB = /** @class */ (function () {
     function TheMovieDB(api_key, base_uri) {
         var _this = this;
@@ -31,7 +30,7 @@ var TheMovieDB = /** @class */ (function () {
         };
         this.client = function (_a, success, error) {
             var url = _a.url, _b = _a.method, method = _b === void 0 ? 'GET' : _b, _c = _a.status, status = _c === void 0 ? 200 : _c, body = _a.body, _d = _a.options, options = _d === void 0 ? {} : _d;
-            var xhr = new xmlhttprequest_1.XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
             xhr.ontimeout = function () {
                 error('{"status_code":408,"status_message":"Request timed out"}');
             };

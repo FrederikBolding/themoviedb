@@ -1,4 +1,3 @@
-import { XMLHttpRequest } from 'xmlhttprequest';
 import {
   AccountOpts,
   AccountSateGuestOpts,
