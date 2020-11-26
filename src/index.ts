@@ -88,12 +88,11 @@ import {
   TVChanges,
 } from './interfaces/tv';
 export default class TheMovieDB {
-  private base_uri = 'http://api.themoviedb.org/3/';
   private images_uri = 'http://image.tmdb.org/t/p/';
   private timeout = 5000;
   private language = 'en-US';
 
-  constructor(private api_key: string) {}
+  constructor(private api_key: string, private base_uri = 'http://api.themoviedb.org/3/') {}
 
   private generateQuery = (opts: { [key: string]: string | number | boolean } = {}) => {
     const query = `?api_key=${this.api_key}&language=${this.language}`;
